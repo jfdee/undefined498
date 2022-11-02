@@ -1,0 +1,5 @@
+.idea
+
+project/games/*
+
+frontend/node_modules
