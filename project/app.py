@@ -1,3 +1,4 @@
+import uvicorn
 from typing import (List, Any, Dict)
 
 from fastapi import FastAPI
@@ -23,3 +24,7 @@ def get_card_point(uuid: str):
     all_cards: List[Dict[str, Any]] = init_all_cards()
     selected_card = get_card(all_cards, game_uuid=uuid)
     return selected_card
+
+
+if __name__ == '__main__':
+    uvicorn.run(app=app, host='localhost', port=8000, log_level='info')
